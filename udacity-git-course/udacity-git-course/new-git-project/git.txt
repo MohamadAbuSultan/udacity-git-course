@@ -1,0 +1,128 @@
+Version Control System (VCS) or Source Code Manager (SCM): A VCS allows you to: 
+revert ﬁles back to a previous state, revert the entire project back to a previous state, 
+review changes made over time, see who last modiﬁed something that might be causing 
+a problem, who introduced an issue and when, and more. 
+
+
+Commit (snapshot): Git thinks of its data like a set of snapshots of a mini ﬁle system. 
+Every time you commit, or save the state of your project in Git, it basically takes a 
+picture of what all your ﬁles look like at that moment and stores a reference to that 
+snapshot. 
+
+
+Repository (repo): A directory that contains your project work, as well as a few ﬁles 
+(hidden by default in Mac OS X) which are used to communicate with Git. Repositories 
+can exist either locally on your computer or as a remote copy on another computer. 
+
+
+Working Directory: The ﬁles that you see in your computer's ﬁle system. When you 
+open your project ﬁles up on a code editor, you're working with ﬁles in the Working 
+Directory. 
+
+This is in contrast to the ﬁles that have been saved (in commits!) in the repository. 
+
+When working with Git, the Working Directory is also diﬀerent from the command line's 
+concept of the current working directory which is the directory that your shell is 
+"looking at" right now. 
+
+
+Checkout: When content in the repository has been copied to the Working Directory. It 
+is possible to checkout many things from a repository; a ﬁle, a commit, a branch, etc. 
+
+
+Staging Area or Staging Index or Index: A ﬁle in the Git directory that stores 
+information about what will go into your next commit. You can think of the staging area 
+as a prep table where Git will take the next commit. Files on the Staging Index are 
+poised to be added to the repository. 
+
+
+SHA: A SHA is basically an ID number for each commit. It is a 40-character string 
+composed of characters (0–9 and a–f) and calculated based on the contents of a ﬁle or 
+directory structure in Git. "SHA" is shorthand for "SHA hash". A SHA might look like this: 
+	e2adf8ae3e2e4ed40add75cc44cf9d0a869afeb6 
+
+
+Branch: A branch is when a new line of development is created that diverges from the 
+main line of development. This alternative line of development can continue without 
+altering the main line.
+
+
+mv oldName NewName بتغير إسم الملف بتكتب الإسم القديم بعدين الجديد
+
+start . بتفتح مجلد سطح المكتب
+
+cd 
+
+config للايميل و اسم المستخدم
+	# sets up Git with your name
+	git config --global user.name "<Your-Full-Name>"
+
+	# sets up Git with your email
+	git config --global user.email "<your-email-address>"
+
+	# makes sure that Git output is colored
+	git config --global color.ui auto
+
+	# displays the original state in a conflict
+	git config --global merge.conflictstyle diff3
+	 
+	git config --list أتوقع أنها بتظهر كل المعلومات من ضمنها إسم المستخدم والإيميل
+
+التحقق من الايميل و اسم المستخدم
+	 git config user.name
+	 git config user.email
+
+Atom Editor Setup
+	git config --global core.editor "atom --wait"
+
+Sublime Text Setup
+	git config --global core.editor "'C:/Program Files/Sublime Text 2/sublime_text.exe' -n -w"
+
+VSCode Setup
+	git config --global core.editor "code --wait"
+
+git init   (initialize)
+	Create brand new repositories(repos) on your computer
+
+git clone
+	Copy existing repos from somewhere else to your local computer
+
+git status
+	check the status of a repo
+	
+clear بتمسح كل الكلام إلي كتبته قبلها
+
+
+ls 
+	used to lists the files in the working directory بيظهر كل إشي بالملف الحالي
+	
+	
+mkdir 
+	used to create a new directory
+	
+	
+cd 
+	used to changes your working directory
+	
+	
+rm 
+	used to remove files and directories
+	
+	
+pwd 
+	 If you lose track of what your shell's working directory is,
+	 you can print its name with the pwd command (which stands for "print working directory").
+
+
+.git directory is the brain/storage center for the repository
+It holds all of the configuration files and directories and is where all of the commits are stored.
+
+description file - this file is only used by the GitWeb program, so we can ignore it
+
+hooks directory - this is where we could place client-side or server-side scripts that we can use to hook into Git's different lifecycle events
+
+info directory - contains the global excludes file
+
+objects directory - this directory will store all of the commits we make
+
+refs directory - this directory holds pointers to commits (basically the "branches" and "tags")
