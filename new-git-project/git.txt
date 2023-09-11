@@ -81,14 +81,21 @@ Sublime Text Setup
 VSCode Setup
 	git config --global core.editor "code --wait"
 
+
 git init   (initialize)
 	Create brand new repositories(repos) on your computer
 
+
 git clone
 	Copy existing repos from somewhere else to your local computer
+	to make an identical copy
+	git clone <path-to-repository-to-clone>
+	Ex: git clone https://github.com/udacity/course-git-blog-project 
+
 
 git status
 	check the status of a repo
+	
 	
 clear بتمسح كل الكلام إلي كتبته قبلها
 
