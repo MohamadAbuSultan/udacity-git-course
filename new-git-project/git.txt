@@ -95,6 +95,22 @@ git clone
 
 git status
 	check the status of a repo
+	To figure out what's going on with a repository
+	git status is our key to the mind of Git
+	It will tell us what Git is thinking and the state of our repository as Git sees it
+	This command will:
+		tell us about new files that have been created in the Working Directory that Git hasn't started tracking, yet	
+		files that Git is tracking that have been modified
+		a whole bunch of other things that we'll be learning about throughout the rest of the course 
+		
+git log
+	review commits	
+	displays information about the existing commits
+	
+
+git show
+	Displays information about the given commit
+	you provide it the commit ID (SHA) and the command displays info about just that one commit
 	
 	
 clear بتمسح كل الكلام إلي كتبته قبلها
@@ -133,3 +149,5 @@ info directory - contains the global excludes file
 objects directory - this directory will store all of the commits we make
 
 refs directory - this directory holds pointers to commits (basically the "branches" and "tags")
+
+
