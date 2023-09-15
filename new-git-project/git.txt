@@ -106,7 +106,19 @@ git status
 git log
 	review commits	
 	displays information about the existing commits
-	
+	used to display all of the commits of a repository
+Navigating The Log
+	git log عشان تتحرك لفوق وتحت وتشوف كل التغييرات ومين عملها بال 
+to scroll down, press
+	j or ↓ to move down one line at a time (scroll down by a line)
+	d to move by half the page screen بتنزل للنص ثم للآخر
+	f to move by a whole page screen بتنزل للآخر 
+to scroll up, press
+	k or ↑ to move up one line at a time (scroll up by a line)
+	u to move by half the page screen
+	b to move by a whole page screen (scroll up by a page)
+press q to quit out of the log (returns to the regular command prompt)	
+
 
 git show
 	Displays information about the given commit
@@ -149,5 +161,3 @@ info directory - contains the global excludes file
 objects directory - this directory will store all of the commits we make
 
 refs directory - this directory holds pointers to commits (basically the "branches" and "tags")
-
-
