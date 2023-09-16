@@ -19,7 +19,9 @@ Working Directory: The ﬁles that you see in your computer's ﬁle system. When
 open your project ﬁles up on a code editor, you're working with ﬁles in the Working 
 Directory. 
 
+
 This is in contrast to the ﬁles that have been saved (in commits!) in the repository. 
+
 
 When working with Git, the Working Directory is also diﬀerent from the command line's 
 concept of the current working directory which is the directory that your shell is 
@@ -40,6 +42,10 @@ SHA: A SHA is basically an ID number for each commit. It is a 40-character strin
 composed of characters (0–9 and a–f) and calculated based on the contents of a ﬁle or 
 directory structure in Git. "SHA" is shorthand for "SHA hash". A SHA might look like this: 
 	e2adf8ae3e2e4ed40add75cc44cf9d0a869afeb6 
+the SHA -
+	git log will display the complete SHA for every single commit.
+	Each SHA is unique, so we don't really need to see the entire SHA.
+	We could get by perfectly fine with knowing just the first 6-8 characters. 
 
 
 Branch: A branch is when a new line of development is created that diverges from the 
@@ -49,9 +55,12 @@ altering the main line.
 
 mv oldName NewName بتغير إسم الملف بتكتب الإسم القديم بعدين الجديد
 
+
 start . بتفتح مجلد سطح المكتب
 
+
 cd 
+
 
 config للايميل و اسم المستخدم
 	# sets up Git with your name
@@ -68,15 +77,19 @@ config للايميل و اسم المستخدم
 	 
 	git config --list أتوقع أنها بتظهر كل المعلومات من ضمنها إسم المستخدم والإيميل
 
+
 التحقق من الايميل و اسم المستخدم
 	 git config user.name
 	 git config user.email
 
+
 Atom Editor Setup
 	git config --global core.editor "atom --wait"
 
+
 Sublime Text Setup
 	git config --global core.editor "'C:/Program Files/Sublime Text 2/sublime_text.exe' -n -w"
+
 
 VSCode Setup
 	git config --global core.editor "code --wait"
@@ -111,8 +124,8 @@ Navigating The Log
 	git log عشان تتحرك لفوق وتحت وتشوف كل التغييرات ومين عملها بال 
 to scroll down, press
 	j or ↓ to move down one line at a time (scroll down by a line)
-	d to move by half the page screen بتنزل للنص ثم للآخر
-	f to move by a whole page screen بتنزل للآخر 
+	d to move by half the page screen (scroll down by a page) 
+	f to move by a whole page screen 
 to scroll up, press
 	k or ↑ to move up one line at a time (scroll up by a line)
 	u to move by half the page screen
@@ -120,6 +133,14 @@ to scroll up, press
 press q to quit out of the log (returns to the regular command prompt)	
 
 
+git log --oneline
+	used to alter how it displays the repository's information بتظهر معلومات أقل في سطر واحد مثل short SHA and the commit message.
+This command:
+	lists one commit per line
+	shows the first 7 characters of the commit's SHA
+	shows the commit's message
+	
+	
 git show
 	Displays information about the given commit
 	you provide it the commit ID (SHA) and the command displays info about just that one commit
@@ -130,6 +151,11 @@ clear بتمسح كل الكلام إلي كتبته قبلها
 
 ls 
 	used to lists the files in the working directory بيظهر كل إشي بالملف الحالي
+	will list all of the files in the current directory
+	
+	
+ls -l
+	displays the information in the long format
 	
 	
 mkdir 
@@ -152,12 +178,20 @@ pwd
 .git directory is the brain/storage center for the repository
 It holds all of the configuration files and directories and is where all of the commits are stored.
 
+
 description file - this file is only used by the GitWeb program, so we can ignore it
+
 
 hooks directory - this is where we could place client-side or server-side scripts that we can use to hook into Git's different lifecycle events
 
+
 info directory - contains the global excludes file
+
 
 objects directory - this directory will store all of the commits we make
 
+
 refs directory - this directory holds pointers to commits (basically the "branches" and "tags")
+
+
+unfound or unrecognized arguments => simple spelling mistake خطأ إملائي
