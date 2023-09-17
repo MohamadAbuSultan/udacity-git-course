@@ -140,7 +140,14 @@ This command:
 	shows the first 7 characters of the commit's SHA
 	shows the commit's message
 	
-	
+git log --stat
+	used to display the files that have been changed in the commit, as well as the number of lines that have been added or deleted
+This command:
+	displays the file(s) that have been modified
+	displays the number of lines that have been added/removed
+	displays a summary line with the total number of modified files and lines that have been added/removed
+
+
 git show
 	Displays information about the given commit
 	you provide it the commit ID (SHA) and the command displays info about just that one commit
